@@ -65,13 +65,6 @@ per_mark <- as.numeric(per_mark)
 cost <- html_nodes(webpage, '.gray3') %>% html_text()
 cost <- gsub('\\s', '',cost)
 
-
-#
-genre <- html_nodes(webpage, 'span.gray_text') %>% html_text()
-head(genre)
-genre <- gsub('\n', '', genre)
-genre <- gsub('[^\\(([а-я],){1,3}\\)]','',genre)
-
 DF.movies <- data.frame('Title'=title_data,
                         'English title'=eng,
                         'Runtime'=time,
