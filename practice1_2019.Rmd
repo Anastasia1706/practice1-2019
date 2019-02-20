@@ -95,6 +95,7 @@ str(per_mark)
 cost <- html_nodes(webpage, '.gray3') %>% html_text()
 head(cost)
 cost <- gsub('\\s', '',cost)
+cost <- gsub('[$]','', cost)
 head(cost)
 str(cost)
 ```
